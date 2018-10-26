@@ -3,6 +3,8 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-flow',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
