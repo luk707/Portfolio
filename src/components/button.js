@@ -6,7 +6,7 @@ import { Theme } from '../theme'
 
 type ButtonProps = {
   theme: Theme,
-  prominence: string,
+  prominence?: 'default' | 'primary',
 }
 
 const Button = styled('button')(
@@ -24,6 +24,12 @@ const Button = styled('button')(
   }),
   (props: ButtonProps) => {
     switch (props.prominence) {
+      case 'primary':
+        return {
+          color: props.theme.colorWhite,
+          backgroundColor: props.theme.colorPrimary,
+          border: `.1rem solid ${props.theme.colorPrimaryDark}`,
+        }
       default:
         return {
           color: props.theme.colorBlack,

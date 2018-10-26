@@ -1,8 +1,10 @@
 // @flow
 
-import { transparentize } from 'polished'
+import { transparentize, darken } from 'polished'
 
 export type Theme = {
+  colorPrimary: string,
+  colorPrimaryDark: string,
   colorWhite: string,
   colorBlack: string,
   colorGrey: string,
@@ -11,6 +13,8 @@ export type Theme = {
 }
 
 const defaultTheme: Theme = {
+  colorPrimary: '#9540bf',
+  colorPrimaryDark: darken(0.1, '#9540bf'),
   colorWhite: '#fff',
   colorBlack: '#222',
   colorGrey: '#ddd',
