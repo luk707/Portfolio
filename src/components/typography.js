@@ -10,6 +10,7 @@ export const Brand = styled('h1')((props: { theme: Theme }) => ({
   fontStyle: 'italic',
   textTransform: 'uppercase',
   fontSize: '4rem',
+  fontWeight: 700,
   strong: {
     fontSize: '4rem',
     fontWeight: 800,

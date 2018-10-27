@@ -28,5 +28,13 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Open+Sans:400,700,800', // you can also specify font weights and styles
+        ],
+      },
+    },
   ],
 }
