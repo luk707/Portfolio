@@ -11,6 +11,7 @@ type ButtonProps = {
 
 const Button = styled('button')(
   (props: ButtonProps) => ({
+    display: 'inline-block',
     padding: '.8rem 2rem',
     fontFamily: props.theme.fontStack,
     borderRadius: '.3rem',
