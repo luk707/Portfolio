@@ -11,12 +11,12 @@ const IndexPage = () => (
     <Hero>
       <CurveDown />
     </Hero>
-    <Container>
-      <Section>
+    <Section>
+      <Container>
         <h1>Homepage</h1>
         <LinkButton to="/page-2/">Go to page 2</LinkButton>
-      </Section>
-    </Container>
+      </Container>
+    </Section>
   </Layout>
 )
 

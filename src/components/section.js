@@ -8,8 +8,7 @@ type SectionProps = {
 }
 
 const Section = styled('section')((props: SectionProps) => ({
-  margin: `${props.theme.space.xl}px 0`,
-  display: 'inline-block',
+  padding: `${props.theme.space.xl}px 0`,
 }))
 
 export default Section
