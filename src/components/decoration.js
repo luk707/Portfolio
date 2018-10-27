@@ -15,6 +15,7 @@ type DecorationContainerProps = {
 
 const DecorationContainer = styled('div')(
   (props: DecorationContainerProps) => ({
+    pointerEvents: 'none',
     position: 'absolute',
     width: `100%`,
     bottom: 0,
