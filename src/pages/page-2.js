@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { LinkButton } from '../components/button'
-import Container from '../component/container'
+import Container from '../components/container'
 
 const SecondPage = () => (
   <Layout>
