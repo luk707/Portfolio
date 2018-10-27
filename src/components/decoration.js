@@ -18,12 +18,13 @@ const DecorationContainer = styled('div')(
     position: 'absolute',
     width: `100%`,
     bottom: 0,
-    paddingTop: `${100 / (props.aspectRatio || 20)}%`,
+    paddingTop: `${100 / props.aspectRatio}%`,
   })
 )
 
 type DecorationProps = {
-  aspectRatio: number,
+  aspectWidth: number,
+  aspectHeight: number,
 }
 
 function decoration(DecorationComponent: Component) {
@@ -38,7 +39,9 @@ function decoration(DecorationComponent: Component) {
     render() {
       return (
         <DecorationAnchor>
-          <DecorationContainer>
+          <DecorationContainer
+            aspectRatio={this.props.aspectWidth / this.props.aspectHeight}
+          >
             <StyledDecorationComponent />
           </DecorationContainer>
         </DecorationAnchor>

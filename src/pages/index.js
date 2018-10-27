@@ -14,7 +14,7 @@ const IndexPage = () => (
           <LinkButton to="/page-2/">Go to page 2</LinkButton>
         </Container>
       </Section>
-      <CurveDown />
+      <CurveDown aspectWidth={10} aspectHeight={1} />
     </Hero>
     <Section>
       <Container>
