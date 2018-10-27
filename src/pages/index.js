@@ -9,6 +9,11 @@ import Section from '../components/section'
 const IndexPage = () => (
   <Layout>
     <Hero>
+      <Section>
+        <Container>
+          <LinkButton to="/page-2/">Go to page 2</LinkButton>
+        </Container>
+      </Section>
       <CurveDown />
     </Hero>
     <Section>

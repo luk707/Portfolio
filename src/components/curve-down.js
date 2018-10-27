@@ -3,10 +3,12 @@
 import React, { Component } from 'react'
 import { Theme } from '../theme'
 import { withTheme } from 'emotion-theming'
+import decoration from './decoration'
 
 type CurveDownProps = {
   theme: Theme,
   offWhite: boolean,
+  className?: string,
 }
 
 class CurveDown extends Component<CurveDownProps> {
@@ -15,10 +17,10 @@ class CurveDown extends Component<CurveDownProps> {
       <svg
         viewBox="0 0 100 100"
         width="100%"
-        height="100px"
+        height="100%"
         preserveAspectRatio="none"
         fill={this.props.theme.colorOffWhite}
-        style={{ display: 'block' }}
+        className={this.props.className}
       >
         <path
           d={`
@@ -35,4 +37,4 @@ class CurveDown extends Component<CurveDownProps> {
   }
 }
 
-export default withTheme(CurveDown)
+export default decoration(withTheme(CurveDown))
