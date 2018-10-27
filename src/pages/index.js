@@ -5,13 +5,22 @@ import Container from '../components/container'
 import Hero from '../components/hero'
 import CurveDown from '../components/curve-down'
 import Section from '../components/section'
+import { Brand, HeroTitle } from '../components/typography'
 
 const IndexPage = () => (
   <Layout>
     <Hero>
       <Section>
         <Container>
-          <LinkButton to="/page-2/">Go to page 2</LinkButton>
+          <Brand>
+            <strong>Luke</strong> Harris
+          </Brand>
+          <HeroTitle>
+            I'm a front-end web developer from Peterborough, UK
+          </HeroTitle>
+          <div>
+            <LinkButton to="/page-2/">Go to page 2</LinkButton>
+          </div>
         </Container>
       </Section>
       <CurveDown aspectWidth={10} aspectHeight={1} />
@@ -19,7 +28,9 @@ const IndexPage = () => (
     <Section>
       <Container>
         <h1>Homepage</h1>
-        <LinkButton to="/page-2/">Go to page 2</LinkButton>
+        <LinkButton prominence="primary" to="/page-2/">
+          Go to page 2
+        </LinkButton>
       </Container>
     </Section>
   </Layout>
