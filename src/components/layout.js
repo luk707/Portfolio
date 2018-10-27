@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import defaultTheme from '../theme'
+import Page from './page'
 
 injectGlobal`
   html {
@@ -33,7 +34,7 @@ const Layout = ({ children }) => (
         }
       `}
       render={data => (
-        <>
+        <Page>
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
@@ -44,7 +45,7 @@ const Layout = ({ children }) => (
             <html lang="en" />
           </Helmet>
           {children}
-        </>
+        </Page>
       )}
     />
   </ThemeProvider>
