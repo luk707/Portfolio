@@ -11,6 +11,7 @@ const DecorationAnchor = styled('div')({
 
 type DecorationContainerProps = {
   aspectRatio: number,
+  top: boolean,
 }
 
 const DecorationContainer = styled('div')(
@@ -18,7 +19,8 @@ const DecorationContainer = styled('div')(
     pointerEvents: 'none',
     position: 'absolute',
     width: `100%`,
-    bottom: 0,
+    top: props.top ? 0 : undefined,
+    bottom: props.top ? undefined : 0,
     paddingTop: `${100 / props.aspectRatio}%`,
   })
 )
@@ -26,6 +28,7 @@ const DecorationContainer = styled('div')(
 type DecorationProps = {
   aspectWidth: number,
   aspectHeight: number,
+  top: boolean,
 }
 
 function decoration(DecorationComponent: Component) {
@@ -41,6 +44,7 @@ function decoration(DecorationComponent: Component) {
       return (
         <DecorationAnchor>
           <DecorationContainer
+            top={this.props.top || false}
             aspectRatio={this.props.aspectWidth / this.props.aspectHeight}
           >
             <StyledDecorationComponent />

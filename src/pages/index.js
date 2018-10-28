@@ -6,6 +6,8 @@ import Hero from '../components/hero'
 import CurveDown from '../components/curve-down'
 import Section from '../components/section'
 import { Brand, HeroTitle } from '../components/typography'
+import Footer from '../components/footer'
+import CurveUp from '../components/curve-up'
 
 const IndexPage = () => (
   <Layout>
@@ -33,6 +35,22 @@ const IndexPage = () => (
         </LinkButton>
       </Container>
     </Section>
+    <Footer>
+      <CurveUp top aspectWidth={10} aspectHeight={1} />
+      <Section>
+        <Container>
+          <Brand>
+            <strong>Luke</strong> Harris
+          </Brand>
+          <HeroTitle>
+            I'm a front-end web developer from Peterborough, UK
+          </HeroTitle>
+          <div>
+            <LinkButton to="/page-2/">Go to page 2</LinkButton>
+          </div>
+        </Container>
+      </Section>
+    </Footer>
   </Layout>
 )
 
