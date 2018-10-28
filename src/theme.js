@@ -29,8 +29,8 @@ export type Theme = {
 }
 
 const defaultTheme: Theme = {
-  colorPrimary: '#9540bf',
-  colorPrimaryDark: darken(0.1, '#9540bf'),
+  colorPrimary: '#a413ec',
+  colorPrimaryDark: darken(0.1, '#a413ec'),
   colorWhite: '#fff',
   colorOffWhite: '#f9f9f9',
   colorBlack: '#222',
