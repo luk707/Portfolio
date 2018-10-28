@@ -2,6 +2,7 @@ import styled from 'react-emotion'
 import { Theme } from '../theme'
 
 const brandStyles = (props: { theme: Theme }) => ({
+  whiteSpace: 'nowrap',
   border: `1rem solid ${props.theme.colorWhite}`,
   color: props.theme.colorWhite,
   margin: 0,
