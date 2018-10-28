@@ -9,7 +9,7 @@ type PageProps = {
 
 const Page = styled('div')((props: PageProps) => ({
   backgroundColor: props.theme.colorOffWhite,
-  maxWidth: props.theme.breakpoints.xl,
+  maxWidth: props.theme.breakpoints.lg,
   margin: 'auto',
 }))
 

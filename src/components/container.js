@@ -13,7 +13,7 @@ const Container = styled('div')((props: ContainerProps) => ({
   maxWidth: '100%',
   padding: `0 ${props.theme.space.md}rem`,
   ...Object.keys(props.theme.breakpoints)
-    .filter(bp => bp !== 'xl')
+    .filter(bp => !~['xl', 'lg'].indexOf(bp))
     .map(bp => props.theme.breakpoints[bp])
     .map(bp => ({
       [atLeast(bp)]: {
