@@ -1,8 +1,9 @@
 ---
 templateKey: blog-post
-title: Hello World
 date: 2018-10-28T15:58:12.436Z
+title: Hello World
 description: Test post
+featuredImage: /img/salt-lake-library.jpg
 tags:
   - hello world
 ---
