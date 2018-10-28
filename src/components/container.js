@@ -11,13 +11,13 @@ type ContainerProps = {
 const Container = styled('div')((props: ContainerProps) => ({
   margin: 'auto',
   maxWidth: '100%',
-  padding: `0 ${props.theme.space.md}rem`,
+  padding: `0 ${props.theme.space.lg}px`,
   ...Object.keys(props.theme.breakpoints)
     .filter(bp => !~['xl', 'lg'].indexOf(bp))
     .map(bp => props.theme.breakpoints[bp])
     .map(bp => ({
       [atLeast(bp)]: {
-        maxWidth: bp - props.theme.space.md * 2,
+        maxWidth: bp - props.theme.space.lg * 2,
         padding: 0,
       },
     }))
