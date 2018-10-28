@@ -6,6 +6,7 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-flow',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify-cms',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
