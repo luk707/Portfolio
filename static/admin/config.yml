@@ -25,7 +25,7 @@ collections:
       - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
       - {
           label: 'Related Posts',
-          name: 'related posts',
+          name: 'relatedPosts',
           widget: 'list',
           required: false,
           field:
