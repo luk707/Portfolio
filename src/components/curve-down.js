@@ -25,7 +25,7 @@ class CurveDown extends Component<CurveDownProps> {
         <path
           d={`
             M 0 0
-            L 0 200
+            L 0 100
             L 100 100
             L 100 0
             C 0 225, 0 0, 0 0
