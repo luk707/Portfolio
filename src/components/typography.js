@@ -1,7 +1,7 @@
 import styled from 'react-emotion'
 import { Theme } from '../theme'
 
-export const Brand = styled('h1')((props: { theme: Theme }) => ({
+const brandStyles = (props: { theme: Theme }) => ({
   border: `1rem solid ${props.theme.colorWhite}`,
   color: props.theme.colorWhite,
   margin: 0,
@@ -15,7 +15,18 @@ export const Brand = styled('h1')((props: { theme: Theme }) => ({
     fontSize: '4rem',
     fontWeight: 800,
   },
-}))
+})
+
+export const Brand = styled('h1')(brandStyles)
+
+export const FooterBrand = styled('h2')(brandStyles, {
+  fontSize: '2rem',
+  padding: '.1rem .5rem',
+  borderWidth: '.5rem',
+  strong: {
+    fontSize: '2rem',
+  },
+})
 
 export const HeroTitle = styled('h2')((props: { theme: Theme }) => ({
   color: props.theme.colorWhite,

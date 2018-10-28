@@ -5,7 +5,7 @@ import Container from '../components/container'
 import Hero from '../components/hero'
 import CurveDown from '../components/curve-down'
 import Section from '../components/section'
-import { Brand, HeroTitle } from '../components/typography'
+import { Brand, FooterBrand, HeroTitle } from '../components/typography'
 import Footer from '../components/footer'
 import CurveUp from '../components/curve-up'
 
@@ -39,9 +39,11 @@ const IndexPage = () => (
       <CurveUp top aspectWidth={10} aspectHeight={1} />
       <Section>
         <Container>
-          <Brand>
-            <strong>Luke</strong> Harris
-          </Brand>
+          <div style={{ textAlign: 'right' }}>
+            <FooterBrand>
+              <strong>Luke</strong> Harris
+            </FooterBrand>
+          </div>
           <HeroTitle>
             I'm a front-end web developer from Peterborough, UK
           </HeroTitle>
