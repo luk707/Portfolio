@@ -23,7 +23,6 @@ exports.createPages = ({ actions, graphql }) => {
       }
     }
   `).then(result => {
-    console.log(result)
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()))
       return Promise.reject(result.errors)
