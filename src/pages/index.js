@@ -8,8 +8,9 @@ import Section from '../components/section'
 import { Brand, FooterBrand, HeroTitle } from '../components/typography'
 import Footer from '../components/footer'
 import CurveUp from '../components/curve-up'
+import { graphql } from 'gatsby'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <Hero>
       <Section>
@@ -33,6 +34,7 @@ const IndexPage = () => (
         <LinkButton prominence="primary" to="/page-2/">
           Go to page 2
         </LinkButton>
+        <pre>{JSON.stringify(data, null, 4)}</pre>
       </Container>
     </Section>
     <Footer>
@@ -57,3 +59,34 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          id
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            templateKey
+            date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
+  }
+`

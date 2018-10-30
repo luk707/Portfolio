@@ -7,6 +7,7 @@ module.exports = {
     'gatsby-plugin-flow',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify-cms',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,7 +15,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
@@ -34,6 +34,42 @@ module.exports = {
       options: {
         fonts: [
           'Open+Sans:400,700,700i,800i', // you can also specify font weights and styles
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 728,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-responsive-iframe',
+            options: {
+              wrapperStyle: 'margin-bottom: 1.0725rem',
+            },
+          },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
         ],
       },
     },
