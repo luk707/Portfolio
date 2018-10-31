@@ -34,3 +34,21 @@ export const HeroTitle = styled('h2')((props: { theme: Theme }) => ({
   fontWeight: 400,
   fontSize: '2rem',
 }))
+
+export const Title = styled('h3')((props: { theme: Theme }) => ({
+  color: props.theme.colorBlack,
+  fontWeight: 400,
+  fontSize: '2.8rem',
+}))
+
+export const PostTitle = styled('h4')((props: { theme: Theme }) => ({
+  color: props.theme.colorBlack,
+  fontWeight: 800,
+  fontSize: '1.8rem',
+}))
+
+export const Small = styled('small')((props: { theme: Theme }) => ({
+  color: props.theme.colorGreyDark,
+  fontWeight: 400,
+  fontSize: '1.4rem',
+}))

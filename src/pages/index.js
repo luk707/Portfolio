@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Layout from '../components/layout'
 import { LinkButton } from '../components/button'
 import Container from '../components/container'
 import Hero from '../components/hero'
 import CurveDown from '../components/curve-down'
 import Section from '../components/section'
-import { Brand, FooterBrand, HeroTitle } from '../components/typography'
+import {
+  Brand,
+  Title,
+  FooterBrand,
+  HeroTitle,
+  PostTitle,
+  Small,
+} from '../components/typography'
 import Footer from '../components/footer'
 import CurveUp from '../components/curve-up'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Row from '../components/row'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -30,11 +39,26 @@ const IndexPage = ({ data }) => (
     </Hero>
     <Section>
       <Container>
-        <h1>Homepage</h1>
-        <LinkButton prominence="primary" to="/page-2/">
-          Go to page 2
-        </LinkButton>
-        <pre>{JSON.stringify(data, null, 4)}</pre>
+        <Title>Recent posts</Title>
+        {data.allMarkdownRemark.edges.map(edge => (
+          <Row key={edge.node.id}>
+            <div>
+              <PostTitle>{edge.node.frontmatter.title}</PostTitle>
+              <div style={{ marginBottom: '1rem' }}>
+                <p>{edge.node.excerpt}</p>
+                <Small>
+                  {edge.node.frontmatter.date} &middot;{' '}
+                  {edge.node.fields.readingTime.text}
+                </Small>
+              </div>
+              <LinkButton to={edge.node.fields.slug}>Read more</LinkButton>
+            </div>
+            <Img
+              style={{ width: '100%', maxWidth: 300, flexShrink: 0 }}
+              fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
+            />
+          </Row>
+        ))}
       </Container>
     </Section>
     <Footer>
@@ -72,6 +96,9 @@ export const pageQuery = graphql`
           excerpt
           fields {
             slug
+            readingTime {
+              text
+            }
           }
           frontmatter {
             title
@@ -82,8 +109,7 @@ export const pageQuery = graphql`
                 }
               }
             }
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM DD")
           }
         }
       }
