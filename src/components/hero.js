@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
-import background from '../images/hero-background.svg'
+import background from '../../static/img/hero-background.svg'
 
 const Hero = styled('div')({
   backgroundImage: `url(${background})`,
