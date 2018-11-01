@@ -11,6 +11,7 @@ injectGlobal`
   html {
     font-size: 62.5%;
     font-family: ${defaultTheme.fontStack};
+    font-display: fallback;
   }
 
   body {

@@ -39,7 +39,7 @@ const defaultTheme: Theme = {
   colorGreyLight: '#eee',
   colorGreyDark: '#545454',
   colorShadow: transparentize(0.9, '#000'),
-  fontStack: '"Open Sans", sans-seif',
+  fontStack: '"Open Sans", Arial, sans-seif',
   breakpoints: {
     xs: 400,
     sm: 600,
