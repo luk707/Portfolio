@@ -16,6 +16,7 @@ const brandStyles = (props: { theme: Theme }) => ({
     fontSize: '4rem',
     fontWeight: 800,
   },
+  fontDisplay: 'swap',
 })
 
 export const Brand = styled('h1')(brandStyles)
