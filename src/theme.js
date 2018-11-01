@@ -37,7 +37,7 @@ const defaultTheme: Theme = {
   colorBlack: '#222',
   colorGrey: '#ddd',
   colorGreyLight: '#eee',
-  colorGreyDark: '#777',
+  colorGreyDark: '#545454',
   colorShadow: transparentize(0.9, '#000'),
   fontStack: '"Open Sans", sans-seif',
   breakpoints: {
