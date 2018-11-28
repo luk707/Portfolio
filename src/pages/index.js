@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Layout from '../components/layout'
 import { LinkButton } from '../components/button'
 import Container from '../components/container'
