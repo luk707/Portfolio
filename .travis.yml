@@ -3,5 +3,10 @@ node_js:
   - '10'
 cache: yarn
 install: yarn
-script:
-  - yarn flow
+jobs:
+  include:
+    - stage: 'Tests'
+      name: 'Unit Tests'
+      script: yarn test
+    - name: 'Static type check'
+      script: yarn flow
