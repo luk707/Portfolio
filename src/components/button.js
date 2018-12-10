@@ -2,7 +2,7 @@
 
 import styled from 'react-emotion'
 import { Link } from 'gatsby'
-import { Theme } from '../theme'
+import type { Theme } from '../theme'
 
 type ButtonProps = {
   theme: Theme,

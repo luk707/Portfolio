@@ -31,7 +31,7 @@ type DecorationProps = {
   top: boolean,
 }
 
-function decoration(DecorationComponent: Component) {
+function decoration(DecorationComponent: Component<{}>) {
   const StyledDecorationComponent = styled(DecorationComponent)({
     position: 'absolute',
     top: 0,

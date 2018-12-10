@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import { Theme } from '../theme'
+import type { Theme } from '../theme'
 import { withTheme } from 'emotion-theming'
 import decoration from './decoration'
 

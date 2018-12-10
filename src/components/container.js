@@ -1,7 +1,7 @@
 // @flow
 
 import styled from 'react-emotion'
-import { Theme } from '../theme'
+import type { Theme } from '../theme'
 import { atLeast } from '../utils'
 
 type ContainerProps = {
