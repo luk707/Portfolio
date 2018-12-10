@@ -52,7 +52,8 @@ const IndexPage = ({ data }) => (
             image={
               <div
                 style={{
-                  minWidth: 200,
+                  width: 200,
+                  flexShrink: 0,
                   marginRight: 20,
                 }}
               >
