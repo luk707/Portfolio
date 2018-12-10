@@ -10,14 +10,15 @@ import {
   Title,
   FooterBrand,
   HeroTitle,
-  PostTitle,
-  Small,
+  // PostTitle,
+  // Small,
 } from '../components/typography'
 import Footer from '../components/footer'
 import CurveUp from '../components/curve-up'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Row from '../components/row'
+// import Row from '../components/row'
+import BlogCard from '../components/blog-card'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -41,23 +42,28 @@ const IndexPage = ({ data }) => (
       <Container>
         <Title>Recent posts</Title>
         {data.allMarkdownRemark.edges.map(edge => (
-          <Row key={edge.node.id}>
-            <div>
-              <PostTitle>{edge.node.frontmatter.title}</PostTitle>
-              <div style={{ marginBottom: '1rem' }}>
-                <p>{edge.node.excerpt}</p>
-                <Small>
-                  {edge.node.frontmatter.date} &middot;{' '}
-                  {edge.node.fields.readingTime.text}
-                </Small>
+          <BlogCard
+            key={edge.node.id}
+            title={edge.node.frontmatter.title}
+            date={edge.node.frontmatter.date}
+            readingTime={edge.node.fields.readingTime.text}
+            slug={edge.node.fields.slug}
+            excerpt={edge.node.excerpt}
+            image={
+              <div
+                style={{
+                  minWidth: 200,
+                  marginRight: 20,
+                }}
+              >
+                <Img
+                  fluid={
+                    edge.node.frontmatter.featuredImage.childImageSharp.fluid
+                  }
+                />
               </div>
-              <LinkButton to={edge.node.fields.slug}>Read more</LinkButton>
-            </div>
-            <Img
-              style={{ width: '100%', maxWidth: 300, flexShrink: 0 }}
-              fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
-            />
-          </Row>
+            }
+          />
         ))}
       </Container>
     </Section>
@@ -104,7 +110,7 @@ export const pageQuery = graphql`
             title
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 300) {
+                fluid(maxWidth: 200) {
                   ...GatsbyImageSharpFluid
                 }
               }

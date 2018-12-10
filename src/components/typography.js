@@ -44,8 +44,9 @@ export const Title = styled('h3')((props: { theme: Theme }) => ({
 
 export const PostTitle = styled('h4')((props: { theme: Theme }) => ({
   color: props.theme.colorBlack,
-  fontWeight: 800,
-  fontSize: '1.8rem',
+  fontWeight: 400,
+  fontSize: '2.4rem',
+  marginTop: '3rem',
 }))
 
 export const Small = styled('small')((props: { theme: Theme }) => ({
