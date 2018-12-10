@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => (
             <strong>Luke</strong> Harris
           </Brand>
           <HeroTitle>
-            I'm a front-end web developer from Peterborough, UK
+            I’m a front-end web developer from Peterborough, UK
           </HeroTitle>
           <div>
             <LinkButton to="/page-2/">Go to page 2</LinkButton>
