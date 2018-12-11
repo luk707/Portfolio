@@ -6,22 +6,25 @@ import { atLeast } from '../utils'
 
 type ContainerProps = {
   theme: Theme,
+  fluid?: number,
 }
 
 const Container = styled('div')((props: ContainerProps) => ({
   margin: 'auto',
-  maxWidth: '100%',
+  maxWidth: props.fluid ? `${(props.fluid * 100).toFixed(2)}%` : '100%',
   padding: `0 ${props.theme.space.lg}px`,
-  ...Object.keys(props.theme.breakpoints)
-    .filter(bp => !~['xl', 'lg'].indexOf(bp))
-    .map(bp => props.theme.breakpoints[bp])
-    .map(bp => ({
-      [atLeast(bp)]: {
-        maxWidth: bp - props.theme.space.lg * 2,
-        padding: 0,
-      },
-    }))
-    .reduce((acc, cur) => ({ ...acc, ...cur }), {}),
+  ...(props.fluid
+    ? {}
+    : Object.keys(props.theme.breakpoints)
+        .filter(bp => !~['xl', 'lg'].indexOf(bp))
+        .map(bp => props.theme.breakpoints[bp])
+        .map(bp => ({
+          [atLeast(bp)]: {
+            maxWidth: bp - props.theme.space.lg * 2,
+            padding: 0,
+          },
+        }))
+        .reduce((acc, cur) => ({ ...acc, ...cur }), {})),
 }))
 
 export default Container
