@@ -10,3 +10,5 @@ jobs:
       script: yarn test
     - name: 'Static type check'
       script: yarn flow
+    - name: 'Static type coverage'
+      script: yarn flow-coverage
