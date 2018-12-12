@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Hero>
       <Section>
-        <Container fluid={0.7}>
+        <Container fluid={0.6}>
           <Brand>
             <strong>Luke</strong> Harris
           </Brand>
@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => (
           </div>
         </Container>
       </Section>
-      <CurveDown aspectWidth={4.65} aspectHeight={1} />
+      <CurveDown aspectWidth={4.88} aspectHeight={1} />
     </Hero>
     <Section>
       <Container>
