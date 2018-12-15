@@ -1,6 +1,6 @@
 // @flow
 
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import type { Theme } from '../theme'
 
 const Card = styled('div')((props: { theme: Theme }) => ({

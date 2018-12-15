@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const DecorationAnchor = styled('div')({
   height: 0,

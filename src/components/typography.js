@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { Theme } from '../theme'
 
 const brandStyles = (props: { theme: Theme }) => ({

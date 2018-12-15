@@ -1,6 +1,6 @@
 // @flow
 
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { atLeast } from '../utils'
 
 const Row = styled('div')({

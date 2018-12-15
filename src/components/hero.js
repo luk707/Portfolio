@@ -1,6 +1,6 @@
 // @flow
 
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import background from '../../static/img/hero-background.svg'
 import type { Theme } from '../theme'
 

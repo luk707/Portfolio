@@ -1,6 +1,6 @@
 // @flow
 
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import type { Theme } from '../theme'
 import { atLeast } from '../utils'
 
