@@ -33,7 +33,7 @@ describe('scalar', () => {
   })
   it('supports custom number of decimal places and rounds places correctly', () => {
     expect(scalar({ decimals: 0 }, 123.456)).toBe('123')
-    expect(scalar({ decimals: 0 }, 234.567)).toBe('124')
+    expect(scalar({ decimals: 0 }, 234.567)).toBe('235')
     expect(scalar({ decimals: 2 }, 654.321)).toBe('654.32')
     expect(scalar({ decimals: 2 }, 123.456)).toBe('123.46')
   })
