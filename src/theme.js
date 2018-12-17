@@ -56,4 +56,31 @@ const defaultTheme: Theme = {
   },
 }
 
+export const darkTheme: Theme = {
+  colorPrimary: '#a413ec',
+  colorPrimaryDark: darken(0.1, '#a413ec'),
+  colorWhite: '#111',
+  colorOffWhite: '#222',
+  colorBlack: '#fff',
+  colorGrey: '#333',
+  colorGreyLight: '#444',
+  colorGreyDark: '#545454',
+  colorShadow: transparentize(0.9, '#000'),
+  fontStack: '"Open Sans", Arial, sans-seif',
+  breakpoints: {
+    xs: 400,
+    sm: 600,
+    md: 900,
+    lg: 1200,
+    xl: 1440,
+  },
+  space: {
+    xs: 2,
+    sm: 8,
+    md: 20,
+    lg: 30,
+    xl: 60,
+  },
+}
+
 export default defaultTheme

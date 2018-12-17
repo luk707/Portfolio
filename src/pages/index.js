@@ -19,6 +19,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 // import Row from '../components/row'
 import BlogCard from '../components/blog-card'
+import ThemeSelect from '../components/theme-select'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -40,6 +41,8 @@ const IndexPage = ({ data }) => (
     </Hero>
     <Section>
       <Container>
+        <label>Theme</label>
+        <ThemeSelect />
         <Title>Recent posts</Title>
         {data.allMarkdownRemark.edges.map(edge => (
           <BlogCard
