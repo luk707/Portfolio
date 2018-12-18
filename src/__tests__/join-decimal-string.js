@@ -1,6 +1,6 @@
 // @flow
 
-import joinDecimalString from '../join-decimal-string'
+import joinDecimalString from '../util/join-decimal-string'
 
 describe('joinDecimalString', () => {
   it("concatenates base and decimal strings together with a '.' character between them", () => {

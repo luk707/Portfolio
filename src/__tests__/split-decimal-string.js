@@ -1,6 +1,6 @@
 // @flow
 
-import splitDecimalString from '../split-decimal-string'
+import splitDecimalString from '../util/split-decimal-string'
 
 describe('splitDecimalString', () => {
   it('returns correct base and decimal string', () => {
