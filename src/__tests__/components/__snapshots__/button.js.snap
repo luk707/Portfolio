@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card renders as expected 1`] = `
+<button
+  className="css-by0ps9"
+>
+  Hello world
+</button>
+`;

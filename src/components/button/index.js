@@ -2,14 +2,14 @@
 
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import type { Theme } from '../theme'
+import type { Theme } from '../../theme'
 
 type ButtonProps = {
   theme: Theme,
   prominence?: 'default' | 'primary',
 }
 
-const Button = styled('button')(
+const Button = styled.button(
   (props: ButtonProps) => ({
     display: 'inline-block',
     padding: '.8rem 2rem',
