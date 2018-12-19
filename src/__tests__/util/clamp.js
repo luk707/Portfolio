@@ -1,6 +1,6 @@
 // @flow
 
-import clamp from '../util/clamp'
+import clamp from '../../util/clamp'
 
 describe('clamp', () => {
   it('returns value when it is within range of min and max', () => {

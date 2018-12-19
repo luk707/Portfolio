@@ -1,6 +1,6 @@
 // @flow
 
-import chunkRight from '../util/chunk-right'
+import chunkRight from '../../util/chunk-right'
 
 describe('chunkRight', () => {
   it('returns correct number of chunks', () => {
