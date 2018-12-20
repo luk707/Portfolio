@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import changeTheme from '../actions/change-theme'
-import defaultTheme, { darkTheme } from '../theme'
+import defaultTheme, { darkTheme } from '../util/theme'
 
 const themes = {
   default: defaultTheme,

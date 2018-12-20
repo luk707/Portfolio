@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import defaultTheme from '../theme'
+import defaultTheme from '../util/theme'
 
 export default combineReducers({
   colorPrimary: (state = defaultTheme.colorPrimary, action) => {

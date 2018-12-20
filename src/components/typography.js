@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Theme } from '../theme'
+import { Theme } from '../util/theme'
 
 const brandStyles = (props: { theme: Theme }) => ({
   whiteSpace: 'nowrap',

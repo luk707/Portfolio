@@ -1,7 +1,7 @@
 // @flow
 
 import styled from '@emotion/styled'
-import type { Theme } from '../theme'
+import type { Theme } from '../util/theme'
 
 type PageProps = {
   theme: Theme,
