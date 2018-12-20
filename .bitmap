@@ -81,7 +81,7 @@
         "trackDir": "src/util/theme",
         "origin": "AUTHORED"
     },
-    "luk707.library/components/button@1.0.0": {
+    "luk707.library/components/button@1.0.1": {
         "files": [
             {
                 "relativePath": "src/components/button/README.md",
