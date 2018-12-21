@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled'
 import background from '../../static/img/hero-background.svg'
-import type { Theme } from '../theme'
+import type { Theme } from '../util/theme'
 
 const Hero = styled('div')((props: { theme: Theme }) => ({
   backgroundImage: `url(${background})`,

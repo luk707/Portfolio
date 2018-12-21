@@ -69,19 +69,19 @@
         "trackDir": "src/util/clamp",
         "origin": "AUTHORED"
     },
-    "luk707.library/src/theme@1.0.0": {
+    "luk707.library/util/theme@1.0.0": {
         "files": [
             {
-                "relativePath": "src/theme/index.js",
+                "relativePath": "src/util/theme/index.js",
                 "test": false,
                 "name": "index.js"
             }
         ],
-        "mainFile": "src/theme/index.js",
-        "trackDir": "src/theme",
+        "mainFile": "src/util/theme/index.js",
+        "trackDir": "src/util/theme",
         "origin": "AUTHORED"
     },
-    "luk707.library/components/button@1.0.0": {
+    "luk707.library/components/button@1.0.1": {
         "files": [
             {
                 "relativePath": "src/components/button/README.md",
@@ -95,6 +95,7 @@
             }
         ],
         "mainFile": "src/components/button/index.js",
+        "trackDir": "src/components/button",
         "origin": "AUTHORED"
     },
     "version": "13.0.4"

@@ -4,7 +4,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'emotion-theming'
 import Button from '../../components/button'
-import defaultTheme from '../../theme'
+import defaultTheme from '../../util/theme'
 
 describe('card', () => {
   it('renders as expected', () => {
