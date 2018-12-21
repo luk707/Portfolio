@@ -37,4 +37,5 @@ class CurveUp extends Component<CurveUpProps> {
   }
 }
 
+// TODO: Fix the problem with flow + emotion
 export default decoration(withTheme(CurveUp))

@@ -28,4 +28,5 @@ class CurveDown extends Component<CurveDownProps> {
   }
 }
 
+// TODO: Fix the problem with flow + emotion
 export default decoration(withTheme(CurveDown))
