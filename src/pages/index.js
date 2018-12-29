@@ -60,11 +60,13 @@ const IndexPage = ({ data }) => (
                   marginRight: 20,
                 }}
               >
-                <Img
-                  fluid={
-                    edge.node.frontmatter.featuredImage.childImageSharp.fluid
-                  }
-                />
+                {edge.node.frontmatter.featuredImage && (
+                  <Img
+                    fluid={
+                      edge.node.frontmatter.featuredImage.childImageSharp.fluid
+                    }
+                  />
+                )}
               </div>
             }
           />

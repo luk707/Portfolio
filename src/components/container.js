@@ -11,7 +11,7 @@ type ContainerProps = {
 
 const Container = styled('div')((props: ContainerProps) => ({
   margin: 'auto',
-  width: props.fluid ? `${(props.fluid * 100).toFixed(2)}%` : '100%',
+  width: props.fluid ? `${(props.fluid * 100).toFixed(2)}%` : undefined,
   ...(props.fluid
     ? {
         minWidth: '75%',
