@@ -2,7 +2,7 @@
 
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import type { Theme } from '../../util/theme'
+import type { Theme } from '../util/theme'
 
 type ButtonProps = {
   theme: Theme,
