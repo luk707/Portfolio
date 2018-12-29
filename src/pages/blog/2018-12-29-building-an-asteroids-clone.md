@@ -24,5 +24,5 @@ Li Europan lingues es membres del sam familie. Lor separat existentie es un myth
 - This is another bullet point that is very long to show the appearance of wrapped lines of text
 - This is a bullet point
 
-<iframe class="mobile-full-width" height='265' scrolling='no' title='Asteroids' src='//codepen.io/luk707/embed/preview/Ydrroj/?height=265&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/luk707/pen/Ydrroj/'>Asteroids</a> by Luke Harris (<a href='https://codepen.io/luk707'>@luk707</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe class="mobile-full-width" height='512' scrolling='no' title='Asteroids' src='//codepen.io/luk707/embed/preview/Ydrroj/?height=265&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/luk707/pen/Ydrroj/'>Asteroids</a> by Luke Harris (<a href='https://codepen.io/luk707'>@luk707</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
