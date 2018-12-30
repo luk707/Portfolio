@@ -16,6 +16,9 @@ import Section from '../components/section'
 import { FooterBrand, HeroTitle } from '../components/typography'
 import { LinkButton } from '../components/button'
 
+// Import styles requied for katex
+import 'katex/dist/katex.min.css'
+
 const BrandedBackLink = styled(Link)(({ theme }: { theme: Theme }) => ({
   ':before': {
     content: '"\\2190"',
@@ -27,7 +30,6 @@ const BrandedBackLink = styled(Link)(({ theme }: { theme: Theme }) => ({
     paddingRight: 10,
   },
   marginLeft: -38,
-  display: 'inline-block',
   marginTop: 60,
   whiteSpace: 'nowrap',
   color: '#9A939D',

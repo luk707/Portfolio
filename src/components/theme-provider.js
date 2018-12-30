@@ -20,8 +20,13 @@ class ThemeProvider extends Component {
               background-color: ${this.props.theme.colorGreyLight};
             }
 
-            * {
+            a,
+            p {
               font-size: 16px;
+            }
+
+            .katex {
+              font-size: 2em !important;
             }
           `}
         />
