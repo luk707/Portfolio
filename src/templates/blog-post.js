@@ -105,7 +105,7 @@ export const pageQuery = graphql`
         }
       }
       frontmatter {
-        date(formatString: "DD MMM 'YY")
+        date(formatString: "DD MMM ‘YY")
         title
         description
         featuredImage {
