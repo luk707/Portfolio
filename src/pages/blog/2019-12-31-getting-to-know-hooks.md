@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
+draft: true
 date: 2018-12-31T12:27:38.129Z
 title: Getting to know hooks
-description: >-
-  Some description to go here
+description: Some description to go here
 featuredImage: /img/screenshot-2018-12-28-at-22.16.17.png
 relatedPosts:
   - 2018-10-30-hello-again
