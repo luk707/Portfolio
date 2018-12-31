@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+draft: true
 date: 2018-10-28T15:58:12.436Z
 title: Hello World
 description: Edit post to trigger build
