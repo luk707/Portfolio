@@ -74,6 +74,14 @@ export default combineReducers({
         return state
     }
   },
+  colorShadowLight: (state = defaultTheme.colorShadowLight, action) => {
+    switch (action.type) {
+      case '@@theme/CHANGE':
+        return action.payload.colorShadowLight || state
+      default:
+        return state
+    }
+  },
   fontStack: (state = defaultTheme.fontStack, action) => {
     switch (action.type) {
       case '@@theme/CHANGE':

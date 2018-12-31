@@ -5,11 +5,10 @@ import type { Theme } from '../util/theme'
 
 const Card = styled('div')((props: { theme: Theme }) => ({
   padding: props.theme.space.md,
-  borderWidth: 1,
-  borderStyle: 'solid',
   backgroundColor: props.theme.colorWhite,
-  borderColor: props.theme.colorGrey,
   marginBottom: props.theme.space.md,
+  borderRadius: 3,
+  boxShadow: `0 6px 11px ${props.theme.colorShadowLight}`,
 }))
 
 export default Card

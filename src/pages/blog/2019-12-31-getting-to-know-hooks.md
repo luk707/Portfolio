@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-draft: true
+draft: false
 date: 2018-12-31T12:27:38.129Z
 title: Getting to know hooks
 description: Some description to go here

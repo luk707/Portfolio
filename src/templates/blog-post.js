@@ -6,15 +6,8 @@ import type { Theme } from '../util/theme'
 import Layout from '../components/layout'
 import Container from '../components/container'
 import Content from '../components/content'
-// import BlogHeader from '../components/blog-header'
 import { graphql, Link } from 'gatsby'
-// import Img from 'gatsby-image'
 import Accent from '../components/accent'
-import Footer from '../components/footer'
-import CurveUp from '../components/curve-up'
-import Section from '../components/section'
-import { FooterBrand, HeroTitle } from '../components/typography'
-import { LinkButton } from '../components/button'
 
 // Import styles requied for katex
 import 'katex/dist/katex.min.css'
@@ -22,7 +15,7 @@ import 'katex/dist/katex.min.css'
 const BrandedBackLink = styled(Link)(({ theme }: { theme: Theme }) => ({
   ':before': {
     content: '"\\2190"',
-    color: '#9A939D',
+    color: '#6C6072',
     fontFamily: 'Lucida Grande',
     fontSize: '18px',
     fontStyle: 'normal',
@@ -32,7 +25,7 @@ const BrandedBackLink = styled(Link)(({ theme }: { theme: Theme }) => ({
   marginLeft: -38,
   marginTop: 60,
   whiteSpace: 'nowrap',
-  color: '#9A939D',
+  color: '#6C6072',
   fontFamily: `${theme.fontStack}`,
   padding: '0.2rem 1rem',
   display: 'inline-block',
@@ -71,26 +64,13 @@ const BlogPost = ({ data }) => (
         </small>
       </Content>
       <Content dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      <Content>
+        <BrandedBackLink to="/">
+          <strong>Luke</strong> Harris
+        </BrandedBackLink>
+      </Content>
     </Container>
-    <div style={{ height: '60px' }} />
-    <Footer>
-      <CurveUp top aspectWidth={10} aspectHeight={1} />
-      <Section>
-        <Container>
-          <div style={{ textAlign: 'right' }}>
-            <FooterBrand>
-              <strong>Luke</strong> Harris
-            </FooterBrand>
-          </div>
-          <HeroTitle>
-            I'm a front-end web developer from Peterborough, UK
-          </HeroTitle>
-          <div>
-            <LinkButton to="/page-2/">Go to page 2</LinkButton>
-          </div>
-        </Container>
-      </Section>
-    </Footer>
+    <div style={{ height: 60 }} />
   </Layout>
 )
 
@@ -110,13 +90,6 @@ export const pageQuery = graphql`
         date(formatString: "DD MMM ‘YY")
         title
         description
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         tags
       }
     }

@@ -1,49 +1,42 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { LinkButton } from '../components/button'
 import Container from '../components/container'
-import Hero from '../components/hero'
-import CurveDown from '../components/curve-down'
 import Section from '../components/section'
-import {
-  Brand,
-  Title,
-  FooterBrand,
-  HeroTitle,
-  // PostTitle,
-  // Small,
-} from '../components/typography'
-import Footer from '../components/footer'
-import CurveUp from '../components/curve-up'
+import { Small } from '../components/typography'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-// import Row from '../components/row'
 import BlogCard from '../components/blog-card'
-import ThemeSelect from '../components/theme-select'
+import Accent from '../components/accent'
+import styled from '@emotion/styled'
+
+const Brand = styled.span(({ theme }: { theme: Theme }) => ({
+  whiteSpace: 'nowrap',
+  color: '#6C6072',
+  fontFamily: `${theme.fontStack}`,
+  padding: '0.2rem 0',
+  display: 'inline-block',
+  fontStyle: 'italic',
+  textTransform: 'uppercase',
+  textDecoration: 'none',
+  fontSize: '18px',
+  fontWeight: 700,
+  strong: {
+    fontSize: '18px',
+    fontWeight: 800,
+  },
+}))
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Hero>
-      <Section>
-        <Container fluid={0.6}>
-          <Brand>
-            <strong>Luke</strong> Harris
-          </Brand>
-          <HeroTitle>
-            I’m a front-end web developer from Peterborough, UK
-          </HeroTitle>
-          <div>
-            <LinkButton to="/page-2/">Go to page 2</LinkButton>
-          </div>
-        </Container>
-      </Section>
-      <CurveDown aspectWidth={4.88} aspectHeight={1} />
-    </Hero>
+    <Accent />
     <Section>
       <Container>
-        <label>Theme</label>
-        <ThemeSelect />
-        <Title>Recent posts</Title>
+        <Brand>
+          <strong>Luke</strong> Harris
+        </Brand>
+        <div style={{ marginTop: 10, marginBottom: 40 }}>
+          <Small>Personal blog</Small>
+        </div>
+        {console.log(data)}
         {data.allMarkdownRemark.edges.map(edge => (
           <BlogCard
             key={edge.node.id}
@@ -52,45 +45,10 @@ const IndexPage = ({ data }) => (
             readingTime={edge.node.fields.readingTime.text}
             slug={edge.node.fields.slug}
             excerpt={edge.node.excerpt}
-            image={
-              <div
-                style={{
-                  width: 200,
-                  flexShrink: 0,
-                  marginRight: 20,
-                }}
-              >
-                {edge.node.frontmatter.featuredImage && (
-                  <Img
-                    fluid={
-                      edge.node.frontmatter.featuredImage.childImageSharp.fluid
-                    }
-                  />
-                )}
-              </div>
-            }
           />
         ))}
       </Container>
     </Section>
-    <Footer>
-      <CurveUp top aspectWidth={10} aspectHeight={1} />
-      <Section>
-        <Container>
-          <div style={{ textAlign: 'right' }}>
-            <FooterBrand>
-              <strong>Luke</strong> Harris
-            </FooterBrand>
-          </div>
-          <HeroTitle>
-            I'm a front-end web developer from Peterborough, UK
-          </HeroTitle>
-          <div>
-            <LinkButton to="/page-2/">Go to page 2</LinkButton>
-          </div>
-        </Container>
-      </Section>
-    </Footer>
   </Layout>
 )
 
@@ -100,7 +58,9 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      filter: {
+        frontmatter: { draft: { ne: true }, templateKey: { eq: "blog-post" } }
+      }
     ) {
       edges {
         node {
@@ -114,14 +74,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 200) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            date(formatString: "MMM DD")
+            date(formatString: "DD MMM ‘YY")
           }
         }
       }

@@ -12,6 +12,7 @@ export type Theme = {
   colorGreyLight: string,
   colorGreyDark: string,
   colorShadow: string,
+  colorShadowLight: string,
   fontStack: string,
   breakpoints: {
     xs: number,
@@ -39,6 +40,7 @@ const defaultTheme: Theme = {
   colorGreyLight: '#eee',
   colorGreyDark: '#545454',
   colorShadow: transparentize(0.9, '#000'),
+  colorShadowLight: transparentize(0.98, '#000'),
   fontStack: '"Open Sans", Arial, sans-seif',
   breakpoints: {
     xs: 400,
@@ -66,6 +68,7 @@ export const darkTheme: Theme = {
   colorGreyLight: '#444',
   colorGreyDark: '#545454',
   colorShadow: transparentize(0.9, '#000'),
+  colorShadowLight: transparentize(0.95, '#000'),
   fontStack: '"Open Sans", Arial, sans-seif',
   breakpoints: {
     xs: 400,

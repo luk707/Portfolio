@@ -22,7 +22,7 @@ class CurveDown extends Component<CurveDownProps> {
         fill={this.props.theme.colorOffWhite}
         className={this.props.className}
       >
-        <path d="M0,0 L0,100 L100,100 L100,33.31 C52.7333333,76.73 29.1,98.44 29.1,98.44 C21.98,104.83 14.73,91.36 10.08,63.11 C10.08,63.11 6.72,42.0733333 0,0 Z" />
+        <path d="M0,0 C33.6666667,65.6666667 50,98.5 50,98.5 C50.67,99.83 51.33,99.83 52,98.5 C52,98.5 68.3333333,65.6666667 100,0 L100,100 L0,100 L0,0 Z" />
       </svg>
     )
   }

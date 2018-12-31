@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+draft: true
 date: 2018-12-29T11:38:17.036Z
 title: Building an asteroids clone
 description: >-
