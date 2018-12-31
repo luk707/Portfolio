@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+draft: true
 date: 2018-10-31T22:21:00.234Z
 title: My experience using Gatsby
 description: Let me take you through my experienvce using Gatsby for the first time.
