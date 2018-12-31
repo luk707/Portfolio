@@ -25,6 +25,9 @@ export default styled.div(({ theme }: { theme: Theme }) => ({
     lineHeight: '28px',
     color: '#6C6072',
   },
+  a: {
+    fontSize: '18px',
+  },
   small: {
     display: 'block',
     fontSize: '18px',
