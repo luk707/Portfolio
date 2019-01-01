@@ -2,6 +2,7 @@
 
 import React from 'react'
 import styled from '@emotion/styled'
+import { Helmet } from 'react-helmet'
 import type { Theme } from '../util/theme'
 import Layout from '../components/layout'
 import Container from '../components/container'
@@ -40,18 +41,43 @@ const BrandedBackLink = styled(Link)(({ theme }: { theme: Theme }) => ({
   },
 }))
 
-const BlogPost = ({ data }) => (
+const BlogPost = ({ data }: { data: any }) => (
   <Layout>
     <Accent />
-    {/* <BlogHeader
-      image={
-        <Img
-          fluid={
-            data.markdownRemark.frontmatter.featuredImage.childImageSharp.fluid
-          }
-        />
-      }
-    /> */}
+    <Helmet
+      title={`${data.site.siteMetadata.title} | ${
+        data.markdownRemark.frontmatter.title
+      }`}
+      meta={[
+        {
+          name: 'description',
+          content: data.markdownRemark.frontmatter.description,
+        },
+        {
+          name: 'og:title',
+          content: data.markdownRemark.frontmatter.title,
+        },
+        {
+          name: 'og:description',
+          content: data.markdownRemark.frontmatter.description,
+        },
+        { name: 'og:type', content: 'article' },
+        {
+          name: 'og:url',
+          content: `${data.site.siteMetadata.siteUrl}/blog/${
+            data.markdownRemark.fields.slug
+          }`,
+        },
+        {
+          name: 'twitter:title',
+          content: data.markdownRemark.frontmatter.title,
+        },
+        {
+          name: 'twitter:description',
+          content: data.markdownRemark.frontmatter.description,
+        },
+      ]}
+    />
     <Container>
       <Content>
         <BrandedBackLink to="/">
@@ -78,10 +104,19 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+        twitterHandle
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html
       fields {
+        slug
         readingTime {
           text
         }

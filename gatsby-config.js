@@ -5,6 +5,7 @@ module.exports = {
     title: 'Luke Harris',
     description: "Luke Harris' personal blog.",
     siteUrl: 'https://lukeharris.io',
+    twitterHandle: '@_lukeharris',
   },
   plugins: [
     'gatsby-plugin-emotion',
@@ -30,7 +31,7 @@ module.exports = {
         background_color: '#a413ec',
         theme_color: '#9540bf',
         display: 'minimal-ui',
-        icon: 'static/img/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'static/img/icon.png',
       },
     },
     'gatsby-plugin-offline',
