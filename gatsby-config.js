@@ -1,3 +1,5 @@
+var markdown = require('markdown').markdown
+
 module.exports = {
   siteMetadata: {
     title: 'Luke Harris',
@@ -107,7 +109,13 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                  custom_elements: [
+                    {
+                      'content:encoded': markdown.toHTML(
+                        edge.node.rawMarkdownBody
+                      ),
+                    },
+                  ],
                 })
               })
             },
@@ -123,7 +131,7 @@ module.exports = {
                   edges {
                     node {
                       excerpt(pruneLength: 130)
-                      html
+                      rawMarkdownBody
                       fields { slug }
                       frontmatter {
                         title
