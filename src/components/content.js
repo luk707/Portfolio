@@ -33,9 +33,12 @@ export default styled.div(({ theme }: { theme: Theme }) => ({
     backgroundColor: transparentize(0.9, theme.colorPrimary),
     borderBottom: `1px solid ${transparentize(0.7, theme.colorPrimary)}`,
     ':hover': {
-      backgroundColor: transparentize(0.7, theme.colorPrimary),
-      borderBottomColor: transparentize(0.5, theme.colorPrimary),
+      backgroundColor: transparentize(0.8, theme.colorPrimary),
+      borderBottomColor: transparentize(0.6, theme.colorPrimary),
     },
+  },
+  code: {
+    backgroundColor: transparentize(0.6, '#f4d142'),
   },
   small: {
     display: 'block',

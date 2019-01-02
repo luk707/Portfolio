@@ -7,4 +7,6 @@ export default styled.div(({ theme }: { theme: Theme }) => ({
   height: 6,
   width: '100%',
   backgroundColor: theme.colorPrimary,
+  borderTopLeftRadius: 3,
+  borderTopRightRadius: 3,
 }))
