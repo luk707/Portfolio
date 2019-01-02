@@ -26,7 +26,7 @@ export default styled.div(({ theme }: { theme: Theme }) => ({
     lineHeight: '28px',
     color: '#6C6072',
   },
-  'p > a': {
+  'p > a, li > a': {
     fontSize: '18px',
     textDecoration: 'none',
     color: theme.colorBlack,
