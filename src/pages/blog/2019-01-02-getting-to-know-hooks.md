@@ -3,7 +3,7 @@ templateKey: blog-post
 draft: false
 date: 2019-01-02T23:13:49.583Z
 title: Getting to know hooks
-description: "Hooks" is a new feature due to land in the 16.8 release of React.
+description: Hooks is a new feature due to land in the 16.8 release of React.
 featuredImage: /img/screenshot-2018-12-28-at-22.16.17.png
 relatedPosts:
   - 2018-10-30-hello-again
