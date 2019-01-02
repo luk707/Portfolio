@@ -2,7 +2,7 @@
 
 exports[`card renders as expected 1`] = `
 <div
-  className="css-amd3ig"
+  className="css-v8nx2g"
 >
   This is a test card
 </div>
