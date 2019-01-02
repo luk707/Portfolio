@@ -1,7 +1,7 @@
 // @flow
 
 import styled from '@emotion/styled'
-import { transparentize, darken } from 'polished'
+import { transparentize } from 'polished'
 import type { Theme } from '../util/theme'
 import { atLeast } from '../utils'
 
