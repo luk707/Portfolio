@@ -46,6 +46,7 @@ export default styled.div(({ theme }: { theme: Theme }) => ({
     backgroundColor: theme.colorBlack,
     padding: 10,
     borderRadius: 3,
+    overflow: 'auto',
   },
   small: {
     display: 'block',
