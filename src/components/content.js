@@ -37,8 +37,15 @@ export default styled.div(({ theme }: { theme: Theme }) => ({
       borderBottomColor: transparentize(0.6, theme.colorPrimary),
     },
   },
-  code: {
+  'p > code': {
     backgroundColor: transparentize(0.6, '#f4d142'),
+  },
+  pre: {
+    fontSize: 18,
+    color: theme.colorGrey,
+    backgroundColor: theme.colorBlack,
+    padding: 10,
+    borderRadius: 3,
   },
   small: {
     display: 'block',
