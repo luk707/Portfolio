@@ -1,6 +1,7 @@
 // @flow
 
 import styled from '@emotion/styled'
+import { transparentize, darken } from 'polished'
 import type { Theme } from '../util/theme'
 import { atLeast } from '../utils'
 
@@ -25,8 +26,16 @@ export default styled.div(({ theme }: { theme: Theme }) => ({
     lineHeight: '28px',
     color: '#6C6072',
   },
-  a: {
+  'p > a': {
     fontSize: '18px',
+    textDecoration: 'none',
+    color: theme.colorBlack,
+    backgroundColor: transparentize(0.9, theme.colorPrimary),
+    borderBottom: `1px solid ${transparentize(0.7, theme.colorPrimary)}`,
+    ':hover': {
+      backgroundColor: transparentize(0.7, theme.colorPrimary),
+      borderBottomColor: transparentize(0.5, theme.colorPrimary),
+    },
   },
   small: {
     display: 'block',

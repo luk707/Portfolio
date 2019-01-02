@@ -38,7 +38,7 @@ Also, be sure to take a look at the official [rules of hooks](https://reactjs.or
 <iframe class="mobile-full-width" height='320' scrolling='no' title='Hooks counter' src='//codepen.io/luk707/embed/preview/maqpJd/?height=320&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/luk707/pen/maqpJd/'>Hooks counter</a> by Luke Harris (<a href='https://codepen.io/luk707'>@luk707</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Below is the same example without hooks, **notice how much more verbose it is**.
+Below is the same example without hooks, _notice how much more verbose it is_.
 
 <iframe class="mobile-full-width" height='320' scrolling='no' title='State counter' src='//codepen.io/luk707/embed/preview/KbyQLP/?height=320&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/luk707/pen/KbyQLP/'>State counter</a> by Luke Harris (<a href='https://codepen.io/luk707'>@luk707</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
