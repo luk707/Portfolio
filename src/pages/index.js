@@ -35,7 +35,6 @@ const IndexPage = ({ data }) => (
       <div style={{ marginTop: 10, marginBottom: 40 }}>
         <Small>Personal blog</Small>
       </div>
-      {console.log(data)}
       {data.allMarkdownRemark.edges.map(edge => (
         <BlogCard
           key={edge.node.id}
