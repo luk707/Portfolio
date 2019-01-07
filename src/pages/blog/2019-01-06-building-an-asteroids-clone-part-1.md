@@ -35,4 +35,4 @@ For building the leaderboard, I am using React and Axios. I am using MongoDB and
 
 Since the game logic runs on dedicated servers, I could implement a co-op mode after completing the project. I'll consider this in more depth once I get there.
 
-Before I start the project, I need to build a proof of concept. Doing so helps uncover potential problems that may require a change to the initial goal. On my next post I am going tackle drawing something to the display and then plotting the points of the spaceship.
+Before I start the project, I need to build a proof of concept. Doing so helps uncover potential problems that may require a change to the initial goal. On my [next post](/blog/2019-01-07-building-an-asteroids-clone-part-2) I am going tackle drawing something to the display and then plotting the points of the spaceship.
