@@ -175,3 +175,5 @@ The result is that now the ship moves whenever the user presses the arrow keys:
 
 <iframe class="mobile-full-width" height='512' scrolling='no' title='4: Listening to user input and moving a player' src='//codepen.io/luk707/embed/preview/KbRpxQ/?height=265&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/luk707/pen/KbRpxQ/'>4: Listening to user input and moving a player</a> by Luke Harris (<a href='https://codepen.io/luk707'>@luk707</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+Next post I will talk about the importance of calculating framerate and encapsulating logic into a GameObject class.
