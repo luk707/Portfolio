@@ -117,4 +117,4 @@ After doing this, I end up with the ship displayed nicely in the centre of the s
 <iframe class="mobile-full-width" height='512' scrolling='no' title='2: Plotting the outline of the spaceship' src='//codepen.io/luk707/embed/preview/WLJbje/?height=265&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/luk707/pen/WLJbje/'>2: Plotting the outline of the spaceship</a> by Luke Harris (<a href='https://codepen.io/luk707'>@luk707</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-For my next post I will show you how I create the game loop and listen to player input.
+For my [next post](/blog/2019-01-09-building-an-asteroids-clone-part-3) I will show you how I create the game loop and listen to player input.
