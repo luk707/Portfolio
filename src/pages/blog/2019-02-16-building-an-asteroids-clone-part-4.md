@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-draft: true
+draft: false
 date: 2019-02-16T12:19:48.311Z
 title: 'Building an Asteroids clone: Part 4'
 description: >-
